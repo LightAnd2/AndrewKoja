@@ -99,6 +99,14 @@ function handleSubmit(e) {
         resumeAutoScroll()
     }, { passive: true })
 
+    wrap.addEventListener('mouseenter', () => {
+        pauseAutoScroll()
+    })
+
+    wrap.addEventListener('mouseleave', () => {
+        if (!isDragging) resumeAutoScroll()
+    })
+
     wrap.addEventListener('wheel', event => {
         offset -= event.deltaY + event.deltaX
         normalizeOffset()
