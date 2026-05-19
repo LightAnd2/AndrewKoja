@@ -6,14 +6,16 @@
 
 :root {
     --bg: #ffffff;
-    --surface: #f7f7f5;
-    --border: #e8e8e4;
-    --text: #111;
-    --muted: #666;
-    --soft: #aaa;
+    --surface: #f4f7f5;
+    --border: #d6e4de;
+    --text: #000000;
+    --muted: #4a6358;
+    --soft: #8aab9e;
     --accent: #18453b;
-    --accent-light: #4ade80;
-    --hero-bg: #050a0f;
+    --accent-light: #008934;
+    --accent-mid: #0b9a6d;
+    --accent-bright: #7bbd00;
+    --hero-bg: #18453b;
     --dark-section: #18453b;
 }
 
@@ -27,7 +29,6 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
-/* ── Nav ── */
 nav {
     position: fixed;
     top: 0;
@@ -38,9 +39,9 @@ nav {
     gap: 40px;
     padding: 0 48px;
     height: 60px;
-    background: rgba(5, 10, 15, 0.85);
+    background: rgba(24, 69, 59, 0.92);
     backdrop-filter: blur(14px);
-    border-bottom: 1px solid rgba(255,255,255,0.06);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
     z-index: 100;
 }
 
@@ -56,22 +57,81 @@ nav {
 .nav-link:hover { color: #fff; }
 .nav-link.active { color: var(--accent-light); }
 
-/* ── Hero ── */
 .hero {
     position: relative;
-    height: 100vh;
+    height: 85vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: var(--hero-bg);
+    background: var(--dark-section);
     overflow: hidden;
 }
 
-#hero-canvas {
+.hero-orb {
     position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
+    border-radius: 50%;
+    filter: blur(90px);
+    opacity: 0.28;
+    pointer-events: none;
+}
+
+.hero-orb-1 {
+    width: 560px;
+    height: 560px;
+    background: radial-gradient(circle, #0b9a6d, transparent 70%);
+    top: -140px;
+    right: -80px;
+    animation: orb-drift-1 12s ease-in-out infinite;
+}
+
+.hero-orb-2 {
+    width: 480px;
+    height: 480px;
+    background: radial-gradient(circle, #008934, transparent 70%);
+    bottom: -100px;
+    left: -60px;
+    animation: orb-drift-2 15s ease-in-out infinite;
+}
+
+.hero-orb-3 {
+    width: 320px;
+    height: 320px;
+    background: radial-gradient(circle, #7bbd00, transparent 70%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: orb-drift-3 10s ease-in-out infinite;
+    opacity: 0.12;
+}
+
+@keyframes orb-drift-1 {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    40%       { transform: translate(-40px, 50px) scale(1.08); }
+    70%       { transform: translate(30px, -30px) scale(0.94); }
+}
+
+@keyframes orb-drift-2 {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    35%       { transform: translate(50px, -40px) scale(1.1); }
+    65%       { transform: translate(-25px, 30px) scale(0.92); }
+}
+
+@keyframes orb-drift-3 {
+    0%, 100% { transform: translate(-50%, -50%) scale(1); }
+    50%       { transform: translate(-50%, -50%) scale(1.3); }
+}
+
+.cursor {
+    display: inline-block;
+    color: var(--accent-light);
+    font-weight: 300;
+    animation: blink 0.75s step-end infinite;
+    margin-left: 1px;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50%       { opacity: 0; }
 }
 
 .hero-content {
@@ -116,10 +176,9 @@ nav {
 
 .hero-btn:hover {
     background: var(--accent-light);
-    color: #111;
+    color: #fff;
 }
 
-/* ── Shared ── */
 .container {
     max-width: 1100px;
     margin: 0 auto;
@@ -136,16 +195,6 @@ nav {
     gap: 14px;
 }
 
-.title-block {
-    display: inline-block;
-    width: 48px;
-    height: 6px;
-    background: var(--accent);
-    border-radius: 3px;
-    flex-shrink: 0;
-}
-
-/* ── About ── */
 .about {
     padding: 100px 0;
     background: var(--surface);
@@ -244,7 +293,6 @@ nav {
     color: var(--text);
 }
 
-/* ── Projects ── */
 .projects {
     padding: 100px 0;
     background: var(--surface);
@@ -256,22 +304,46 @@ nav {
     overflow: hidden;
     -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
     mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
-    cursor: grab;
-    user-select: none;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    padding: 12px 0 20px;
+}
+
+@keyframes scroll-left {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+}
+
+@keyframes scroll-right {
+    from { transform: translateX(-50%); }
+    to   { transform: translateX(0); }
 }
 
 .marquee-track {
     display: flex;
-    gap: 20px;
+    gap: 16px;
     width: max-content;
-    padding: 12px 0 20px;
     will-change: transform;
+}
+
+.marquee-fwd {
+    animation: scroll-left 35s linear infinite;
+}
+
+.marquee-rev {
+    animation: scroll-right 35s linear infinite;
+}
+
+.marquee-wrap:hover .marquee-fwd,
+.marquee-wrap:hover .marquee-rev {
+    animation-play-state: paused;
 }
 
 .project-card {
     position: relative;
-    width: 360px;
-    height: 270px;
+    width: 420px;
+    height: 300px;
     border-radius: 16px;
     overflow: hidden;
     flex-shrink: 0;
@@ -310,7 +382,7 @@ nav {
 .card-overlay {
     position: absolute;
     inset: 0;
-    background: rgba(10, 31, 24, 0.96);
+    background: rgba(24, 69, 59, 0.97);
     padding: 24px 22px;
     display: flex;
     flex-direction: column;
@@ -352,7 +424,6 @@ nav {
     gap: 14px;
 }
 
-/* ── Resume ── */
 .resume-section {
     padding: 100px 0;
     background: var(--surface);
@@ -380,7 +451,7 @@ nav {
     font-size: 14px;
     font-weight: 700;
     color: #fff;
-    background: var(--text);
+    background: var(--accent);
     text-decoration: none;
     padding: 14px 32px;
     border-radius: 8px;
@@ -390,7 +461,6 @@ nav {
 
 .resume-download-btn:hover { opacity: 0.75; }
 
-/* ── Contact ── */
 .contact {
     background: var(--dark-section);
     padding: 100px 0;
@@ -398,10 +468,6 @@ nav {
 
 .contact-title {
     color: #fff;
-}
-
-.contact-title .title-block {
-    background: var(--accent);
 }
 
 .contact-inner {
@@ -452,7 +518,7 @@ nav {
 
 .contact-form button {
     background: var(--accent-light);
-    color: #111;
+    color: #fff;
     border: none;
     border-radius: 8px;
     padding: 13px 28px;
@@ -497,7 +563,6 @@ nav {
 
 .contact-links a:hover { color: rgba(255,255,255,0.55); }
 
-/* ── Footer ── */
 footer {
     background: var(--dark-section);
     border-top: 1px solid rgba(255,255,255,0.06);
@@ -524,7 +589,6 @@ footer p {
 
 .footer-socials a:hover { color: #fff; }
 
-/* ── Mobile ── */
 @media (max-width: 768px) {
     nav { gap: 24px; padding: 0 20px; }
 

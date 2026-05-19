@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Andrew Koja | Full-Stack Developer</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
@@ -17,20 +18,20 @@
         <a href="#contact" class="nav-link">Contact</a>
     </nav>
 
-    <!-- HERO -->
     <section id="home" class="hero">
-        <canvas id="hero-canvas"></canvas>
+        <div class="hero-orb hero-orb-1"></div>
+        <div class="hero-orb hero-orb-2"></div>
+        <div class="hero-orb hero-orb-3"></div>
         <div class="hero-content">
             <p class="hero-greeting">Hello, I'm <span class="accent">Andrew.</span></p>
-            <p class="hero-title">I'm a software engineer.</p>
+            <p class="hero-title">I'm a <span id="typewriter"></span><span class="cursor">|</span></p>
             <a href="#projects" class="hero-btn">View my work &darr;</a>
         </div>
     </section>
 
-    <!-- ABOUT -->
     <section id="about" class="about">
         <div class="container">
-            <h2 class="section-title">About<span class="title-block"></span></h2>
+            <h2 class="section-title">About</h2>
             <p class="about-statement">I'm a Computer Science student at <em>Michigan State University</em>, pursuing a career in software engineering. I have hands-on experience designing and shipping production applications — from live sports dashboards and real-time odds platforms to interactive crime visualization tools. Based in Metro Detroit.</p>
 
             <div class="skills-section">
@@ -49,6 +50,8 @@
                         <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React"><span>React</span></div>
                         <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" alt="FastAPI"><span>FastAPI</span></div>
                         <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original-wordmark.svg" alt="Flask"><span>Flask</span></div>
+                        <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vitejs/vitejs-original.svg" alt="Vite"><span>Vite</span></div>
+                        <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js"><span>Node.js</span></div>
                     </div>
                 </div>
                 <div class="skill-group">
@@ -57,20 +60,20 @@
                         <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg" alt="SQLite"><span>SQLite</span></div>
                         <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker"><span>Docker</span></div>
                         <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git"><span>Git</span></div>
+                        <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg" alt="Redis"><span>Redis</span></div>
+                        <div class="skill-card"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg" alt="PyTorch"><span>PyTorch</span></div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- PROJECTS -->
     <section id="projects" class="projects">
         <div class="container">
-            <h2 class="section-title">Projects<span class="title-block"></span></h2>
+            <h2 class="section-title">Projects</h2>
         </div>
         <div class="marquee-wrap">
-            <div class="marquee-track">
-                <!-- set 1 -->
+            <div class="marquee-track marquee-fwd">
                 <div class="project-card">
                     <img src="images/lightai.png" alt="LightAI">
                     <div class="card-label">LightAI</div>
@@ -134,7 +137,6 @@
                         <a href="https://github.com/LightAnd2/PokePrice" target="_blank">GitHub &rarr;</a>
                     </div>
                 </div>
-                <!-- set 2 (duplicate for seamless loop) -->
                 <div class="project-card">
                     <img src="images/lightai.png" alt="LightAI">
                     <div class="card-label">LightAI</div>
@@ -199,13 +201,26 @@
                     </div>
                 </div>
             </div>
+            <div class="marquee-track marquee-rev">
+                <div class="project-card"><img src="images/pokeprice.png" alt="PokePrice"><div class="card-label">PokePrice</div><div class="card-overlay"><h3>PokePrice</h3><p>Full-stack Pokemon TCG price tracker with real-time market data and historical charts. URL-driven filter state and a snapshot engine recording TCGPlayer prices.</p><a href="https://github.com/LightAnd2/PokePrice" target="_blank">GitHub &rarr;</a></div></div>
+                <div class="project-card"><img src="images/faceread.png" alt="FaceRead"><div class="card-label">FaceRead</div><div class="card-overlay"><h3>FaceRead</h3><p>Real-time emotion analysis, local face recognition, and ASL interaction in a polished browser-based AI experience built around live webcam input.</p><div class="card-links"><a href="https://face-read.vercel.app" target="_blank">Live &rarr;</a><a href="https://github.com/LightAnd2/FaceRead" target="_blank">GitHub &rarr;</a></div></div></div>
+                <div class="project-card"><img src="images/crimescope.png" alt="CrimeScope"><div class="card-label">CrimeScope</div><div class="card-overlay"><h3>CrimeScope</h3><p>Crime data visualization pulling live incidents from 6 U.S. city portals. Pin, cluster, and heatmap modes. Auto-detects stale portal data.</p><div class="card-links"><a href="https://crime-scope.vercel.app" target="_blank">Live &rarr;</a><a href="https://github.com/LightAnd2/CrimeScope" target="_blank">GitHub &rarr;</a></div></div></div>
+                <div class="project-card"><img src="images/sharpedge.png" alt="SharpEdge"><div class="card-label">SharpEdge</div><div class="card-overlay"><h3>SharpEdge</h3><p>Sportsbook odds board aggregating live lines from 9 books across NFL, NBA, MLB, and NHL. Demand-driven polling with line movement history.</p><a href="https://github.com/LightAnd2/SharpEdge" target="_blank">GitHub &rarr;</a></div></div>
+                <div class="project-card"><img src="images/footylive.png" alt="FootyLive"><div class="card-label">FootyLive</div><div class="card-overlay"><h3>FootyLive</h3><p>Real-time football dashboard tracking live scores, standings, and fixtures across 6 European leagues. WebSockets, Redis caching, SQLite fallback.</p><a href="https://github.com/LightAnd2/FootyLive" target="_blank">GitHub &rarr;</a></div></div>
+                <div class="project-card"><img src="images/lightai.png" alt="LightAI"><div class="card-label">LightAI</div><div class="card-overlay"><h3>LightAI</h3><p>Uptime and latency monitor with per-endpoint LSTM anomaly detection, WebSocket real-time updates, root cause analysis, and GitHub deploy regression tracking.</p><div class="card-links"><a href="https://lightai-kohl.vercel.app" target="_blank">Live &rarr;</a><a href="https://github.com/LightAnd2/LightAI" target="_blank">GitHub &rarr;</a></div></div></div>
+                <div class="project-card"><img src="images/pokeprice.png" alt="PokePrice"><div class="card-label">PokePrice</div><div class="card-overlay"><h3>PokePrice</h3><p>Full-stack Pokemon TCG price tracker with real-time market data and historical charts. URL-driven filter state and a snapshot engine recording TCGPlayer prices.</p><a href="https://github.com/LightAnd2/PokePrice" target="_blank">GitHub &rarr;</a></div></div>
+                <div class="project-card"><img src="images/faceread.png" alt="FaceRead"><div class="card-label">FaceRead</div><div class="card-overlay"><h3>FaceRead</h3><p>Real-time emotion analysis, local face recognition, and ASL interaction in a polished browser-based AI experience built around live webcam input.</p><div class="card-links"><a href="https://face-read.vercel.app" target="_blank">Live &rarr;</a><a href="https://github.com/LightAnd2/FaceRead" target="_blank">GitHub &rarr;</a></div></div></div>
+                <div class="project-card"><img src="images/crimescope.png" alt="CrimeScope"><div class="card-label">CrimeScope</div><div class="card-overlay"><h3>CrimeScope</h3><p>Crime data visualization pulling live incidents from 6 U.S. city portals. Pin, cluster, and heatmap modes. Auto-detects stale portal data.</p><div class="card-links"><a href="https://crime-scope.vercel.app" target="_blank">Live &rarr;</a><a href="https://github.com/LightAnd2/CrimeScope" target="_blank">GitHub &rarr;</a></div></div></div>
+                <div class="project-card"><img src="images/sharpedge.png" alt="SharpEdge"><div class="card-label">SharpEdge</div><div class="card-overlay"><h3>SharpEdge</h3><p>Sportsbook odds board aggregating live lines from 9 books across NFL, NBA, MLB, and NHL. Demand-driven polling with line movement history.</p><a href="https://github.com/LightAnd2/SharpEdge" target="_blank">GitHub &rarr;</a></div></div>
+                <div class="project-card"><img src="images/footylive.png" alt="FootyLive"><div class="card-label">FootyLive</div><div class="card-overlay"><h3>FootyLive</h3><p>Real-time football dashboard tracking live scores, standings, and fixtures across 6 European leagues. WebSockets, Redis caching, SQLite fallback.</p><a href="https://github.com/LightAnd2/FootyLive" target="_blank">GitHub &rarr;</a></div></div>
+                <div class="project-card"><img src="images/lightai.png" alt="LightAI"><div class="card-label">LightAI</div><div class="card-overlay"><h3>LightAI</h3><p>Uptime and latency monitor with per-endpoint LSTM anomaly detection, WebSocket real-time updates, root cause analysis, and GitHub deploy regression tracking.</p><div class="card-links"><a href="https://lightai-kohl.vercel.app" target="_blank">Live &rarr;</a><a href="https://github.com/LightAnd2/LightAI" target="_blank">GitHub &rarr;</a></div></div></div>
+            </div>
         </div>
     </section>
 
-    <!-- RESUME -->
     <section id="resume" class="resume-section">
         <div class="container">
-            <h2 class="section-title">Resume<span class="title-block"></span></h2>
+            <h2 class="section-title">Resume</h2>
             <div class="resume-embed-wrap">
                 <iframe src="resume.pdf" class="resume-embed" title="Andrew Koja Resume"></iframe>
             </div>
@@ -213,10 +228,9 @@
         </div>
     </section>
 
-    <!-- CONTACT -->
     <section id="contact" class="contact">
         <div class="container">
-            <h2 class="section-title contact-title">Contact<span class="title-block"></span></h2>
+            <h2 class="section-title contact-title">Contact</h2>
             <div class="contact-inner">
                 <form class="contact-form" onsubmit="handleSubmit(event)">
                     <div class="form-row">
