@@ -11,6 +11,7 @@ Personal portfolio website for Andrew Koja, featuring selected projects, technic
 - HTML
 - CSS
 - JavaScript
+- C++
 
 ## Featured Projects
 

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Andrew Koja</title>
+    <meta name="description" content="Explore Andrew Koja's full-stack projects, including real-time monitoring, football data, crime visualization, sportsbook tools, browser-based AI, market tracking, and client work.">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Andrew Koja Portfolio">
+    <meta property="og:title" content="Projects | Andrew Koja">
+    <meta property="og:description" content="Detailed case studies covering the products, technical decisions, frameworks, and tools behind Andrew Koja's work.">
+    <meta property="og:image" content="https://raw.githubusercontent.com/LightAnd2/AndrewKoja/main/images/lightapi.webp">
+    <meta property="og:image:alt" content="LightAPI monitoring dashboard built by Andrew Koja">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Projects | Andrew Koja">
+    <meta name="twitter:description" content="Full-stack case studies spanning real-time systems, data visualization, AI, and client work.">
+    <meta name="twitter:image" content="https://raw.githubusercontent.com/LightAnd2/AndrewKoja/main/images/lightapi.webp">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <a href="index.html#home" class="nav-link">Home</a>
+        <a href="index.html#about" class="nav-link">About</a>
+        <a href="projects.html" class="nav-link active">Projects</a>
+        <a href="index.html#resume" class="nav-link">Resume</a>
+        <a href="index.html#contact" class="nav-link">Contact</a>
+    </nav>
+
+    <main class="projects-page">
+        <div class="container">
+            <header class="projects-page-intro">
+                <span class="section-eyebrow">Selected work</span>
+                <h1>Projects built to solve real problems.</h1>
+                <p>A complete collection of the products I have designed and built, spanning real-time systems, data visualization, browser-based AI, market tracking, and client work.</p>
+            </header>
+
+            <div class="project-detail-list">
+                <article class="project-detail">
+                    <img src="images/lightapi.webp" alt="LightAPI public API directory and monitoring dashboard" loading="lazy" decoding="async">
+                    <div class="project-detail-copy">
+                        <h2>LightAPI</h2>
+                        <p>LightAPI turns a directory of more than 1,500 free public APIs into an active monitoring platform. Visitors can discover an API, add it to an isolated workspace, and immediately track uptime and latency.</p>
+                        <p>Readings stream to the dashboard over WebSockets, while per-endpoint anomaly detection learns normal behavior and flags unusual performance. The platform also includes incident history, predictive alerts, security hardening, and a Python monitoring SDK.</p>
+                        <p class="project-stack"><strong>Frameworks &amp; tools</strong>React · Vite · Tailwind CSS · Recharts · FastAPI · SQLAlchemy · SQLite · APScheduler · WebSockets · PyTorch · scikit-learn</p>
+                        <div class="project-detail-links">
+                            <a href="https://lightapi.dev" target="_blank" rel="noopener">Live site &rarr;</a>
+                            <a href="https://github.com/LightAnd2/LightAPI" target="_blank" rel="noopener">View GitHub &rarr;</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-detail">
+                    <img src="images/footylive.webp" alt="FootyLive World Cup knockout bracket" loading="lazy" decoding="async">
+                    <div class="project-detail-copy">
+                        <h2>FootyLive</h2>
+                        <p>FootyLive brings live scores, fixtures, standings, top scorers, team information, and match history together across 12 football competitions.</p>
+                        <p>Its tournament experience includes themed knockout brackets, two-leg aggregation, penalty shootouts, and champion states. Finished seasons are archived locally so tables and brackets remain available without repeatedly calling the external API.</p>
+                        <p class="project-stack"><strong>Frameworks &amp; tools</strong>React 18 · TypeScript · Vite · Tailwind CSS · React Router · FastAPI · SQLAlchemy · SQLite · WebSockets · Redis</p>
+                        <div class="project-detail-links">
+                            <a href="https://github.com/LightAnd2/FootyLive" target="_blank" rel="noopener">View GitHub &rarr;</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-detail">
+                    <img src="images/crimescope.webp" alt="CrimeScope interactive crime data map" loading="lazy" decoding="async">
+                    <div class="project-detail-copy">
+                        <h2>CrimeScope</h2>
+                        <p>CrimeScope transforms live incident records from 17 U.S. city data portals into an interactive geographic exploration tool.</p>
+                        <p>Users can move between individual pins, clustered incidents, and heatmap views, filter by severity and time of day, and share URL-synced views. The fully client-side app normalizes data from both Socrata and ArcGIS sources and communicates when a portal is not current.</p>
+                        <p class="project-stack"><strong>Frameworks &amp; tools</strong>React · Vite · Leaflet · React Leaflet · Zustand · Recharts · date-fns · Socrata SODA API · ArcGIS FeatureServer</p>
+                        <div class="project-detail-links">
+                            <a href="https://crime-scope.vercel.app" target="_blank" rel="noopener">Live site &rarr;</a>
+                            <a href="https://github.com/LightAnd2/CrimeScope" target="_blank" rel="noopener">View GitHub &rarr;</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-detail">
+                    <img src="images/sharpedge.webp" alt="SharpEdge sportsbook odds dashboard" loading="lazy" decoding="async">
+                    <div class="project-detail-copy">
+                        <h2>SharpEdge</h2>
+                        <p>SharpEdge is a sportsbook comparison dashboard that brings live lines from nine books into one interface across the NFL, NBA, MLB, and NHL.</p>
+                        <p>Demand-driven polling keeps data collection focused on the markets people are actually viewing, while line-movement history makes it easier to see how prices shift between books over time.</p>
+                        <p class="project-stack"><strong>Frameworks &amp; tools</strong>React · Vite · React Router · Recharts · Flask · Gunicorn · SQLite · The Odds API</p>
+                        <div class="project-detail-links">
+                            <a href="https://github.com/LightAnd2/SharpEdge" target="_blank" rel="noopener">View GitHub &rarr;</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-detail">
+                    <img src="images/faceread.webp" alt="FaceRead browser-based AI interface" loading="lazy" decoding="async">
+                    <div class="project-detail-copy">
+                        <h2>FaceRead</h2>
+                        <p>FaceRead combines real-time emotion analysis, local face recognition, and ASL interaction around a live webcam feed.</p>
+                        <p>The experience focuses on immediate visual feedback and approachable interactions, presenting several computer-vision capabilities as one polished browser product rather than a collection of disconnected demos.</p>
+                        <p class="project-stack"><strong>Frameworks &amp; tools</strong>React · Vite · Tailwind CSS · Framer Motion · Flask · face-api.js · MediaPipe · DeepFace · scikit-learn · Three.js</p>
+                        <div class="project-detail-links">
+                            <a href="https://face-read.vercel.app" target="_blank" rel="noopener">Live site &rarr;</a>
+                            <a href="https://github.com/LightAnd2/FaceRead" target="_blank" rel="noopener">View GitHub &rarr;</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-detail">
+                    <img src="images/pokeprice.webp" alt="PokePrice Pokemon card market tracker" loading="lazy" decoding="async">
+                    <div class="project-detail-copy">
+                        <h2>PokePrice</h2>
+                        <p>PokePrice is a full-stack Pokémon TCG tracker that combines current market prices with historical charts for individual cards.</p>
+                        <p>Search and filter state lives in the URL so useful views can be bookmarked or shared. A snapshot engine records TCGPlayer prices over time, turning changing listings into market history that can be explored visually.</p>
+                        <p class="project-stack"><strong>Frameworks &amp; tools</strong>React · Vite · Flask · SQLite · Axios · Recharts · Pokémon TCG API</p>
+                        <div class="project-detail-links">
+                            <a href="https://github.com/LightAnd2/PokePrice" target="_blank" rel="noopener">View GitHub &rarr;</a>
+                        </div>
+                    </div>
+                </article>
+
+                <div class="client-work-heading">
+                    <span class="section-eyebrow">Client work</span>
+                    <h2>Built for a real community.</h2>
+                    <p>Apostles4Jesus is different from the personal projects above: this was a production website designed and delivered for an active organization and its audience.</p>
+                </div>
+
+                <article class="project-detail client-work">
+                    <img src="images/apostles4jesus.webp" alt="Apostles4Jesus bilingual Orthodox teaching website" loading="lazy" decoding="async">
+                    <div class="project-detail-copy">
+                        <h2>Apostles4Jesus</h2>
+                        <p>I built a complete bilingual teaching platform for Apostles4Jesus, a real Orthodox Christian community with more than 15,000 followers across social media.</p>
+                        <p>The site provides five fully mirrored pages in English and Arabic with true RTL layouts, an episode library, live-stream detection, team and mission pages, and a secured serverless contact form. It is also installable as a PWA, works offline, and includes performance, accessibility, security, and multilingual SEO work.</p>
+                        <p class="project-stack"><strong>Frameworks &amp; tools</strong>Vanilla HTML · CSS · JavaScript · Node.js · Netlify Functions · reCAPTCHA v3 · Resend · Service Worker · Netlify</p>
+                        <div class="project-detail-links">
+                            <a href="https://apostles4jesus.com" target="_blank" rel="noopener">Live site &rarr;</a>
+                            <a href="https://github.com/LightAnd2/A4J" target="_blank" rel="noopener">View GitHub &rarr;</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <a href="index.html#projects" class="back-home-link">&larr; Back to featured projects</a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-socials">
+            <a href="https://github.com/LightAnd2" target="_blank" rel="noopener" aria-label="GitHub">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+            </a>
+            <a href="mailto:kojaandrew0@gmail.com" aria-label="Email">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </a>
+        </div>
+        <p>Copyright &copy; Andrew Koja 2026. All rights reserved.</p>
+    </footer>
+
+    <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
+    <script defer src="/_vercel/insights/script.js"></script>
+</body>
+</html>

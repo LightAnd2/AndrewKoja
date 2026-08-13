@@ -49,21 +49,3 @@ function handleSubmit(e) {
     const body = `From: ${name} (${email})%0A%0A${encodeURIComponent(message)}`
     window.location.href = `mailto:kojaandrew0@gmail.com?subject=${encodeURIComponent(subject)}&body=${body}`
 }
-
-;(function () {
-    const wrap = document.querySelector('.marquee-wrap')
-    if (!wrap) return
-    wrap.querySelectorAll('.project-card').forEach(card => {
-        card.addEventListener('mouseenter', () => {
-            card.style.transform = 'translateY(-4px) scale(1.02)'
-            card.style.boxShadow = '0 12px 32px rgba(0,0,0,0.18)'
-            card.style.transition = 'transform 0.25s ease, box-shadow 0.25s ease'
-            card.style.zIndex = '2'
-        })
-        card.addEventListener('mouseleave', () => {
-            card.style.transform = ''
-            card.style.boxShadow = ''
-            card.style.zIndex = ''
-        })
-    })
-})()
