@@ -4,7 +4,7 @@ Personal portfolio website for Andrew Koja, featuring selected projects, technic
 
 ## Live Site
 
-[https://andrew-koja-portfolio.vercel.app](https://andrew-koja-portfolio.vercel.app)
+[https://andrew-koja.vercel.app](https://andrew-koja.vercel.app)
 
 ## Tech Stack
 
@@ -15,6 +15,7 @@ Personal portfolio website for Andrew Koja, featuring selected projects, technic
 
 ## Featured Projects
 
+- LightAPI
 - FootyLive
 - SharpEdge
 - CrimeScope
