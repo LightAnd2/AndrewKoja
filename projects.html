@@ -4,19 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects | Andrew Koja</title>
-    <meta name="description" content="Explore Andrew Koja's full-stack projects, including real-time monitoring, football data, crime visualization, sportsbook tools, browser-based AI, market tracking, and client work.">
+    <meta name="description" content="Explore Andrew Koja's full-stack projects, including AI tennis analysis, real-time monitoring, football data, crime visualization, browser-based AI, market tracking, and client work.">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Andrew Koja Portfolio">
     <meta property="og:title" content="Projects | Andrew Koja">
     <meta property="og:description" content="Detailed case studies covering the products, technical decisions, frameworks, and tools behind Andrew Koja's work.">
-    <meta property="og:image" content="https://raw.githubusercontent.com/LightAnd2/AndrewKoja/main/images/lightapi.webp">
-    <meta property="og:image:alt" content="LightAPI monitoring dashboard built by Andrew Koja">
+    <meta property="og:image" content="https://raw.githubusercontent.com/LightAnd2/AndrewKoja/main/images/raquette.gif">
+    <meta property="og:image:alt" content="Raquette AI tennis rally analysis dashboard built by Andrew Koja">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Projects | Andrew Koja">
     <meta name="twitter:description" content="Full-stack case studies spanning real-time systems, data visualization, AI, and client work.">
-    <meta name="twitter:image" content="https://raw.githubusercontent.com/LightAnd2/AndrewKoja/main/images/lightapi.webp">
+    <meta name="twitter:image" content="https://raw.githubusercontent.com/LightAnd2/AndrewKoja/main/images/raquette.gif">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css?v=20261009-2">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -37,6 +37,20 @@
             </header>
 
             <div class="project-detail-list">
+                <article class="project-detail">
+                    <img src="images/raquette.gif" alt="Raquette AI tennis rally analysis results with ball tracking and court map" loading="lazy" decoding="async">
+                    <div class="project-detail-copy">
+                        <h2>Raquette</h2>
+                        <p>Raquette turns broadcast tennis footage into structured rally data. It detects the court, tracks the ball and near-side player, identifies hits and bounces, calls bounces in or out, and labels serves, forehands, and backhands.</p>
+                        <p>Results stay synchronized with the source video and appear on a top-down court map with rally statistics and a searchable event timeline. The pipeline combines deep-learning models with court geometry and post-processing built specifically for broadcast footage.</p>
+                        <p class="project-stack"><strong>Frameworks &amp; tools</strong>React · Vite · Tailwind CSS · React Router · FastAPI · PyTorch · TrackNet · YOLOv8n · CatBoost · MediaPipe Pose · OpenCV · Docker</p>
+                        <div class="project-detail-links">
+                            <a href="https://raquette.vercel.app" target="_blank" rel="noopener">Live demo &rarr;</a>
+                            <a href="https://github.com/LightAnd2/Raquette" target="_blank" rel="noopener">View GitHub &rarr;</a>
+                        </div>
+                    </div>
+                </article>
+
                 <article class="project-detail">
                     <img src="images/lightapi.webp" alt="LightAPI public API directory and monitoring dashboard" loading="lazy" decoding="async">
                     <div class="project-detail-copy">
